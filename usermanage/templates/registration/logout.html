@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+</head>
+<body>
+
+Are you sure you want to logout?
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit">Logout</input>
+</form>
+
+</body>
+</html>
