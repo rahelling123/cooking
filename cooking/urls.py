@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from usermanage.views import index, login_custom, signup_custom, logout_custom, dashboard
+from usermanage.views import index, login_custom, signup_customer, logout_custom, dashboard, signup_restaurant, dashboard_restaurant
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^dashboard/$', dashboard, name='dashboard'),
-    url(r'^signup/$', signup_custom, name='signup'),
+    url(r'^signup_restaurant/$', signup_restaurant, name='signup_restaurant'),
+    url(r'^signup_customer/$', signup_customer, name='signup_customer'),
+    url(r'^dashboar_restaurant/$', dashboard_restaurant, name='dashboard_restaurant'),
     url(r'^login/$', login_custom, name='login'),
     url(r'^logout/$', logout_custom, name='logout'),
     url(r'^logout/$', auth_views.logout, name='logout'),
