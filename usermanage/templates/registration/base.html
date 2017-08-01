@@ -6,12 +6,12 @@
 </head>
 <body>
 <h1><a href="{% url 'index' %}">Community Kitchen</a></h1>
-{##}
-{#    {% if user != None %}#}
-{#    You are logged in as <b>{{ user.username }}</b><br>#}
-{#    {% else %}#}
-{#    <a href="{% url 'login' %}">Please log in</a>#}
-{#    {% endif %}#}
+
+    {% if user != None %}
+    You are logged in as <b>{{ user.username }}</b><br>
+    {% else %}
+    <a href="{% url 'login' %}">Please log in</a>
+    {% endif %}
 
 {% block content %}
 {% endblock %}
